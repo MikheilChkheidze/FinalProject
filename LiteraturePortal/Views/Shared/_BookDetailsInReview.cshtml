@@ -1,0 +1,43 @@
+﻿@model LiteraturePortal.ViewModel.BookAndReviewsViewModel
+
+<h4>Book record for Writer</h4>
+<div class="row form-border">
+    <div class="col-sm-5">
+        @* Author and Title *@
+        <div class="row">
+            <div class="col-sm-3">
+                <label asp-for="Author" class="control-label"></label>
+            </div>
+            <div class="col-sm-9" style="padding-bottom:5px;">
+                <input asp-for="Author" disabled class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <label asp-for="Title" class="control-label"></label>
+            </div>
+            <div class="col-sm-9" style="padding-bottom:5px;">
+                <input asp-for="Title" disabled class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-5 col-sm-offset-2">
+        @* Genre and Year *@
+        <div class="row">
+            <div class="col-sm-3">
+                <label asp-for="Genre" class="control-label"></label>
+            </div>
+            <div class="col-sm-9" style="padding-bottom:5px;">
+                <input asp-for="Genre" disabled class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <label asp-for="Year" class="control-label"></label>
+            </div>
+            <div class="col-sm-9" style="padding-bottom:5px;">
+                <input asp-for="Year" disabled class="form-control" />
+            </div>
+        </div>
+    </div>
+</div>

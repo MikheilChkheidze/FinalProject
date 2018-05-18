@@ -1,0 +1,40 @@
+﻿@model LiteraturePortal.Models.IndividualButtonPartial
+
+<td style="width:150px;">
+    <div class="btn-group" role="group">
+        @Html.Partial("_IndividualButtonPartial",
+            new IndividualButtonPartial {
+                Action="Edit",
+                ButtonType="btn-primary",
+                Glyph="pencil",
+                Text = "Edit Button",
+                ReviewId=Model.ReviewId,
+                WriterId= Model.WriterId,
+                BookId= Model.BookId
+            })
+
+        @Html.Partial("_IndividualButtonPartial",
+            new IndividualButtonPartial
+            {
+                Action = "Details",
+                ButtonType = "btn-success",
+                Glyph = "list",
+                Text = "Details Button",
+                ReviewId = Model.ReviewId,
+                WriterId = Model.WriterId,
+                BookId = Model.BookId
+            })
+
+        @Html.Partial("_IndividualButtonPartial",
+            new IndividualButtonPartial
+            {
+                Action = "Delete",
+                ButtonType = "btn-danger",
+                Glyph = "trash",
+                Text = "Delete Button",
+                ReviewId = Model.ReviewId,
+                WriterId = Model.WriterId,
+                BookId = Model.BookId
+            })
+    </div>
+</td>

@@ -1,0 +1,63 @@
+﻿@model LiteraturePortal.ViewModel.BookAndReviewsViewModel
+@using LiteraturePortal.Utility
+
+<div>
+    <table class="table table-condensed table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m=>m.PastReviewsObj.FirstOrDefault().Pages)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.PastReviewsObj.FirstOrDefault().Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.PastReviewsObj.FirstOrDefault().Details)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.PastReviewsObj.FirstOrDefault().DateAdded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.PastReviewsObj.FirstOrDefault().ReviewType.Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.PastReviewsObj)
+        { 
+            <tr>
+                <td>
+                    @Html.DisplayFor(m=>item.Pages)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Details)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.DateAdded)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.ReviewType.Name)
+                </td>
+                <td>
+                    @if (item.DateAdded.Date == DateTime.Now.Date && User.IsInRole(SD.AdminEndUser))
+                    { 
+                        @Html.Partial("_IndividualButtonPartial",
+                                        new IndividualButtonPartial
+                                        { 
+                                            Action="Delete",
+                                            ButtonType="btn-danger",
+                                            Glyph="trash",
+                                            Text="Delete Button",
+                                            ReviewId=item.Id
+
+                                        })
+
+                    }
+                </td>
+            </tr>
+
+        }
+    </table>
+</div>

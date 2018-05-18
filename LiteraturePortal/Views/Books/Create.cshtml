@@ -1,0 +1,106 @@
+﻿@model LiteraturePortal.Models.Book
+@{
+    ViewData["Model"] = "Create";
+}
+
+<br />
+<h2>Add New Book</h2>
+<hr />
+
+<form asp-action="Create">
+    <div class="form-border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="ISBN" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="ISBN" class="form-control" />
+                </div>
+            </div>
+
+            <span asp-validation-for="ISBN" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="Author" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Author" class="form-control" />
+                </div>
+            </div>
+
+            <span asp-validation-for="Author" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="Title" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Title" class="form-control" />
+                </div>
+            </div>
+
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="Genre" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Genre" class="form-control" />
+                </div>
+            </div>
+
+            <span asp-validation-for="Genre" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="Year" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Year" class="form-control" />
+                </div>
+            </div>
+
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="Pages" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Pages" class="form-control" />
+                </div>
+            </div>
+
+            <span asp-validation-for="Pages" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2">
+                    <label asp-for="Language" class="custom-label"></label>
+                </div>
+                <div class="col-sm-4">
+                    <input asp-for="Language" class="form-control" />
+                </div>
+            </div>
+
+            <span asp-validation-for="Language" class="text-danger"></span>
+        </div>
+
+        <br />
+        <div class="form-group">
+            <input type="submit" value="Add Book" class="btn btn-sm btn-primary" />
+            <a asp-action="Index" asp-route-userId="@Model.UserId" class="btn btn-sm btn-success">Back to List</a>
+        </div>
+    </div>
+    <input asp-for="UserId" type="hidden" />
+</form>
+
