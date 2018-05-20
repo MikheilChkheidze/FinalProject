@@ -1,7 +1,7 @@
 # FinalProject
 Team Members: Giorgi Qviria, Nino Grigalashvili, Mikheil Chkheidze
 
-Visual Studio Solution Description
+Visual Studio Solution Description:
 
 The web application is written, mostly, using Code-first approach. We have used NuGet
 Package Manager Console to connect to SQL database and created migrations. Then we 
