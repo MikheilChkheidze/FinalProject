@@ -1,5 +1,6 @@
 # FinalProject
 Team Members: Giorgi Qviria, Nino Grigalashvili, Mikheil Chkheidze
+
 Visual Studio Solution Description
 
 The web application is written, mostly, using Code-first approach. We have used NuGet
